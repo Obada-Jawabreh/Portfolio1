@@ -19,34 +19,33 @@
   }
   
   .navbar-brand h1 {
-    color: white;
+    color: #00cc68;
     margin: 0;
     margin-left: 60px;
   }
   
   .navbar-nav .nav-item .nav-link {
     text-decoration: none;
-    color: white;
+    color: #00cc68;
     font-size: 20px;
     padding: 10px 16px;
   }
   
   .navbar-nav .nav-item .nav-link:hover {
-    color: #67C6E3;
+    color: white;
   }
-
- li a:active{
+  /* li a:active{
     padding-left: 20px;
     padding-right: 20px;
     color: white;
     font-size: 15px;
-  }
-/* ******************************************************* */
+  } */
+  /* ******************************************************* */
   .hero {
     position: relative;
     display: flex;
     flex-direction: row;
-    justify-content: space-around; /* Ensure space around elements */
+    justify-content: space-around; 
     align-items: center;
     margin-top: 10px;
     height: 600px;
@@ -55,56 +54,54 @@
     overflow: hidden;
     padding-top: 20px;
   }
-
-  .hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url("") no-repeat center center;
-    background-size: cover;
-    filter: blur(2px);
-    z-index: 0; /* Make sure it's behind everything */
-  }
-
+  
   .in-hero {
     position: relative;
     z-index: 1;
     text-align: center;
     border-radius: 20px;
     background-color: #fcfcfc;
-    height: 450px;
-    width: 500px;
+    height: 400px;
+    width: 1000px;
     box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
     margin-right: 20px; /* Add margin to create space */
     padding: 20px; /* Add padding for inner content spacing */
   }
-
-  .image {
-    position: relative;
-    z-index: 1;
-  }
-
+  
   .image img {
     width: 100%;
     height: 450px;
     padding-top: 5px;
     border-radius: 20px;
   }
-
+  
   .text h1 {
     padding-top: 10px;
     text-align: center;
     color: rgb(58, 58, 58);
     font-weight: bold;
   }
-
+  
   .text p {
     text-align: center;
     padding: 5px;
     font-size: 26px;
+  }
+  .btn-hero{
+    padding: 10px 20px;
+    background-color: #00ff84;
+    color: #000;
+    border: none;
+    cursor:pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    border-radius: 15px;
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+  }
+  .btn-hero:hover{
+    background-color: #00dc72;
   }
   @media (max-width: 768px) {
     .hero {
@@ -250,14 +247,13 @@
       align-items: center;
       gap: 10px;
       text-align: center;
-      flex-basis: calc(50% - 20px); /* Two items per row by default */
     }
-    .section div{
-      font-size: 1.2em;
+    .section i{
+      font-size: 3.2em;
     }
     @media (max-width: 768px) {
       .section {
-          flex-basis: calc(100% - 20px); /* One item per row on smaller screens */
+          flex-basis: calc(100%); /* One item per row on smaller screens */
       }
   }
   @media (min-width: 1024px) {
@@ -266,53 +262,62 @@
       }
   }
   /* ****************************************************** */
-  .pall{
+  .pall {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #AEB8C2;
+    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
     margin-top: 60px;
-    background-color:#AEB8C2 ;
-    box-shadow: 0px 7px 10px rgba(0, 0, 0 , 0.5);
     gap: 10px;
     padding: 20px;
-  }
-  .pall h1{
+}
+
+.pall h1 {
     color: rgb(58, 58, 58);
     font-weight: bold;
     margin-top: 40px;
-  }
-  .project{
+}
+
+.project {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
-    margin-top: 100px;
-  }
-  .p-card{
+    margin-top: 20px;
+}
+
+.p-card {
     width: 325px;
     background-color: #f0f0f0;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
     /* margin: 20px; */
-  }
-  .p-card img{
+}
+
+.p-card img {
     width: 100%;
-    height: auto;
-  }
-  .p-content{
+    height: 200px; /* Fixed height for all images */
+    object-fit: cover; /* Ensures images cover the area without distortion */
+}
+
+.p-content {
     padding: 16px;
-  }
-  .p-content h3{
+}
+
+.p-content h3 {
     font-size: 28px;
     margin-bottom: 8px;
-  }
-  .p-content p{
+}
+
+.p-content p {
     color: #666;
     font-size: 15px;
     line-height: 1.3;
-  }
-  .p-content .btn{
+}
+
+/* .p-content .btn {
     display: inline-block;
     padding: 8px 16px;
     background-color: #333;
@@ -320,8 +325,9 @@
     border-radius: 4px;
     margin-top: 4px;
     color: #fff;
-  }
-    /* **************************************************** */
+} */
+
+    /****************************************************** */
     .parent-foot {
       display: flex;
       flex-direction: row;
@@ -332,38 +338,42 @@
       color: white;
       flex-wrap: wrap;
     }
-
-    .foot {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      min-width: 250px;
-      margin: 10px;
-    }
+    
     .me{
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 15px;
       min-width: 250px;
       margin-top: 40px;
     }
-    .me a{
-      color: white;
-      text-decoration: none;
-    }
-    .foot a {
-      color: white;
-      text-decoration: none;
-    }
-
     .Contact {
       margin-top: 20px;
       display: flex;
       gap: 20px;
       justify-content: center;
     }
+    .me div{
+      font-size: 25px;
+      text-align: center;
+    }
+    .me a{
+      color: white;
+      text-decoration: none;
+    }
+    .foot {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      min-width: 250px;
+      margin-top: 40px;
+    }
+    .foot a {
+      color: white;
+      text-decoration: none;
+    }
 
-    .foot i {
+
+    .me i {
       font-size: 30px;
     }
 
